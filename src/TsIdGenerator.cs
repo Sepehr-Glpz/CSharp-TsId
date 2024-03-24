@@ -20,8 +20,8 @@ public class TsIdGenerator
     public TsIdGenerator(byte nodeId, DateTimeOffset epoch) : this(nodeId) => 
         _epoch = epoch;
 
-    public TsIdGenerator(byte nodeId) => 
-        _nodeId = nodeId;
+    public TsIdGenerator(byte nodeId) =>
+        (_nodeId, _epoch) = (nodeId, DefaultEpoch);
 
     public TsIdGenerator() : base()
     {
